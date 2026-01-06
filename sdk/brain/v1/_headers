@@ -1,0 +1,12 @@
+# Versioned Brain (immutable, safe to cache forever)
+#/sdk/brain/v1/*
+/sdk/brain/v1/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# "latest" should not be immutable (keep it fresh)
+#/sdk/brain/latest/*
+/sdk/brain/latest/*
+  Cache-Control: no-store
+
+/sdk/brain/v1/*.js
+  Cache-Control: public, max-age=31536000, immutable
